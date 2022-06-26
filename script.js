@@ -26,10 +26,14 @@ function imc() {
     )} - Obesidade.`;
   }
 
-  var menorPeso = (peso * 18.6) / calculoImc;
-  var maiorPeso = (peso * 24.99) / calculoImc;
+  if (peso === '' || altura === ''){
+    elementoPesoIdeal.innerHTML = 'Preencha seu peso e altura corretamente.'
+  } else {
+    var menorPeso = (peso * 18.6) / calculoImc;
+    var maiorPeso = (peso * 24.99) / calculoImc;
 
-  elementoPesoIdeal.innerHTML = `Seu peso ideal está entre ${menorPeso.toFixed(
-    1
-  )}kg e ${maiorPeso.toFixed(1)}kg.`;
+    elementoPesoIdeal.innerHTML = `Seu peso ideal está entre ${menorPeso.toFixed(
+      1
+    )}kg e ${maiorPeso.toFixed(1)}kg.`;
+  }
 }
