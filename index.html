@@ -13,9 +13,9 @@
   <div class="container">
     <h1>IMC</h1>
     <p>Peso:</p>
-    <input placeholder="Digite seu peso..." class="input" type="text" id="valorPeso">
+    <input placeholder="Digite seu peso..." class="input" type="text" id="valorPeso" onchange="this.value = this.value.replace(/,/g, '.')">
     <p>Altura:</p>
-    <input placeholder="Digite sua altura..." class="input" type="text" id="valorAltura">
+    <input placeholder="Digite sua altura..." class="input" type="text" id="valorAltura" onchange="this.value = this.value.replace(/,/g, '.')">
 
     <button class="botao" onclick="imc()">Calcular IMC</button>
     <h3 id="resposta"></h3>
